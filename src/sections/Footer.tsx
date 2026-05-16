@@ -1,4 +1,15 @@
-import { Instagram, Phone, Mail, MapPin } from 'lucide-react'
+import { Instagram, Phone, Mail, MapPin, ExternalLink } from 'lucide-react'
+
+const SQUARE_STORE = 'https://shop.burnt-designs.com'
+
+const shopLinks = [
+  { label: 'Dining Tables', path: '/category/dining-tables' },
+  { label: 'Coffee Tables', path: '/category/coffee-tables' },
+  { label: 'End Tables', path: '/category/end-tables' },
+  { label: 'Entry Signs', path: '/category/signs' },
+  { label: 'Wall Art', path: '/category/wall-art' },
+  { label: 'Cutting Boards', path: '/category/cutting-boards' },
+]
 
 export default function Footer() {
   return (
@@ -28,14 +39,21 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Shop */}
+          {/* Shop — routes to Square */}
           <div>
             <p className="font-inter font-bold text-xs tracking-wider uppercase mb-5" style={{ color: 'rgba(255,246,232,0.35)' }}>Shop</p>
             <ul className="space-y-3">
-              {['Dining Tables', 'Coffee Tables', 'End Tables', 'Driveway Signs', 'Wall Art'].map(l => (
-                <li key={l}>
-                  <button onClick={() => document.getElementById('tables')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="text-sm transition-colors hover:text-[#f0b35b]" style={{ color: 'rgba(255,246,232,0.55)' }}>{l}</button>
+              {shopLinks.map(l => (
+                <li key={l.label}>
+                  <a
+                    href={`${SQUARE_STORE}${l.path}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm transition-colors hover:text-[#f0b35b] flex items-center gap-1.5"
+                    style={{ color: 'rgba(255,246,232,0.55)' }}
+                  >
+                    {l.label} <ExternalLink size={10} />
+                  </a>
                 </li>
               ))}
             </ul>
@@ -71,6 +89,19 @@ export default function Footer() {
               <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer"
                 className="text-sm font-bold transition-colors hover:text-[#f0b35b]" style={{ color: 'rgba(255,246,232,0.6)' }}>
                 Pinterest
+              </a>
+            </div>
+
+            {/* Square Store Link */}
+            <div className="mt-6 pt-4" style={{ borderTop: '1px solid rgba(255,246,232,0.08)' }}>
+              <a
+                href={SQUARE_STORE}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm font-bold transition-colors hover:text-[#f0b35b]"
+                style={{ color: '#f0b35b' }}
+              >
+                <ExternalLink size={14} /> Visit Square Store
               </a>
             </div>
           </div>
