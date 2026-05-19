@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Eye, ExternalLink } from 'lucide-react'
 
-const SQUARE_STORE = 'https://shop.burnt-designs.com'
+const SQUARE_STORE = 'https://shop.burntdesigns.com'
 
 type MainCategory = 'All' | 'Natural Edge' | 'Modern Edge' | 'Decorative Edge' | 'Epoxy'
 type SubCategory = string
@@ -79,7 +79,7 @@ const products: Product[] = [
     storeUrl: `${SQUARE_STORE}/product/mushroom-table`,
   },
   {
-    id: 9, name: 'The JAKS Custom Sign', mainCategory: 'Natural Edge', subCategory: 'Welcome Signs',
+    id: 9, name: 'The JAMES Custom Sign', mainCategory: 'Natural Edge', subCategory: 'Welcome Signs',
     description: 'Custom family name sign with ornate lettering, established date on live-edge cedar.',
     price: '$185+', image: '/images/product-jaks-sign.jpg', featured: true,
     storeUrl: `${SQUARE_STORE}/product/jaks-sign`,
