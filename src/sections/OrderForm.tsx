@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
 import { Send, Phone, Mail, MapPin, Clock, DollarSign, Sparkles, ExternalLink } from 'lucide-react'
 
-const SQUARE_STORE = 'https://shop.burnt-designs.com'
+const SQUARE_STORE = 'https://shop.burntdesigns.com'
 
 const itemTypes = ['Dining Table', 'Coffee Table', 'End Table', 'Cutting Board Coated', 'Sign', 'Art / Wall Piece'] as const
 type ItemType = typeof itemTypes[number]
